@@ -1,0 +1,48 @@
+*{
+    padding: 0px ;
+    margin: 0px;
+}
+nav{
+    background-color: aqua;
+}
+.new-jobs .card{
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px 10px;
+}
+.favorite{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+}
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+.title{
+    width: fit-content;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+.w-20{
+max-width: 20%;
+}
+footer{
+    background-color: aqua;
+    color: black;
+}
