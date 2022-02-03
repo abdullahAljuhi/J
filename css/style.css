@@ -3,7 +3,7 @@
     margin: 0px;
 }
 nav{
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .new-jobs .card{
     justify-content: center;
@@ -28,7 +28,7 @@ nav{
 }
 .title{
     width: fit-content;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 10px;
     border-radius: 20px;
     text-align: center;
@@ -43,6 +43,20 @@ nav{
 max-width: 20%;
 }
 footer{
-    background-color: aqua;
+    /* background-color: aqua; */
     color: black;
+}
+.main-personal{
+
+}
+.main-personal i{
+  font-size: 7em;
+}
+@media  (max-width:800px) {
+  html{
+    font-size: 12px;
+  }
+  .add{
+    min-width: 100%;
+  }
 }

@@ -32,7 +32,7 @@
             <a class="nav-link" href="jobs.html">jobs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="jobs.html">service</a>
+            <a class="nav-link" href="service.html">service</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="companies.html">companies</a>
@@ -41,14 +41,14 @@
             <a class="nav-link" href="about us.html">about us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="jobs.html">contact</a>
+            <a class="nav-link" href="contact us.html">contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">log in</a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
@@ -89,28 +89,23 @@
             <div>
               <div class="row my-3">
                 <div class="col-md-4">
-                  <select class="select" style="width: 100%;">
-                    <option selected>veiw as</option>
+                  <select class="main-select" style="width: 100%;">
                     <option value="all">show all</option>
                     <option value="compony">veiw as compony</option>
                     <option value="city">veiw as city</option>
                   </select>
                 </div>
                 <div class="col-md-4 second-select">
-                  <select class="select" style="width: 100%;">
-                    <optgroup class="city-select">
-                      <option value="1">muklla</option>
-                      <option value="1">city 1</option>
-                    </optgroup>
-                    <optgroup class="compony-select">
-                      <option value="1">compny 1</option>
-                    </optgroup>
+                  <select class="select second-select" style="width: 100%;">
+                      <option value="1" class="city">muklla</option>
+                      <option value="1" class="city">city 1</option>
+                      <option value="compony 1" class="compony">compny 1</option>
                   </select>
     
                 </div>
               </div>
               <div class="input-group my-3">
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control" placeholder="Search" id="search">
                 <button class="btn btn-success" type="submit">Go</button>
               </div>
             </div>
@@ -120,7 +115,8 @@
                         <img src="./images/slide/slid1.jpg" class="img-thumbnail" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">web desgine</h5>
-                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                            <h6 class="card-subtitle mb-2 text-muted ">compony 1</h6>
+                            <h6 class="card-subtitle mb-2 text-muted ">muklla</h6>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing eli. blanditiis natus. Voluptate, numquam earum?</p>
                             <a href="job details.html" class="text-decrotion-none">more details</a>
                             <p class="card-text"><small class="text-muted">3 mins ago</small></p>
@@ -132,8 +128,8 @@
                       <img src="./images/slide/slid1.jpg" class="img-thumbnail" alt="...">
                       <div class="card-body">
                           <h5 class="card-title">web desgine</h5>
-                          <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing eli. blanditiis natus. Voluptate, numquam earum?</p>
+                          <h6 class="card-subtitle mb-2 text-muted ">compony 2</h6>
+                          <h6 class="card-subtitle mb-2 text-muted ">al sh shiher</h6>                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing eli. blanditiis natus. Voluptate, numquam earum?</p>
                           <a href="job details.html" class="text-decrotion-none">more details</a>
                           <p class="card-text"><small class="text-muted">3 mins ago</small></p>
                       </div>
@@ -144,7 +140,8 @@
                     <img src="./images/slide/slid1.jpg" class="img-thumbnail" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">web desgine</h5>
-                        <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                        <h6 class="card-subtitle mb-2 text-muted ">compony 3</h6>
+                        <h6 class="card-subtitle mb-2 text-muted ">fdkj</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing eli. blanditiis natus. Voluptate, numquam earum?</p>
                         <a href="job details.html" class="text-decrotion-none">more details</a>
                         <p class="card-text"><small class="text-muted">3 mins ago</small></p>
@@ -179,5 +176,17 @@
       </div>
       <!-- Right -->
     </footer>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#search").on("input", function() {
+      var value = $(this).val().toLowerCase();
+        $(".card").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+       });
+      });
+
+        });
+    </script>
 </body>
 </html>
